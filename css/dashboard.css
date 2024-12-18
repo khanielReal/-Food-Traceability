@@ -1,0 +1,199 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+}
+
+.sidebar .profile {
+    text-align: center;
+    padding: 20px;
+}
+
+.sidebar .profile img {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar .profile p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li:hover {
+    background-color: #444;
+}
+
+.sidebar ul li a,
+.sidebar ul li button {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+.sidebar ul li .dropdown-menu {
+    margin-left: 20px;
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li:hover .dropdown-menu {
+    display: block;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.top-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.top-navbar .farm-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.top-navbar .year-dropdown,
+.top-navbar .search-bar,
+.top-navbar .add-crop-btn {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.top-navbar .year-dropdown {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.top-navbar .search-bar {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+/* Add Crop Button Styling */
+.add-crop-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-crop-btn:hover {
+    background-color: #45a049;
+}
+
+/* Analytics and Chart Container */
+.analytics {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container canvas {
+    width: 100%;
+    height: 300px;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+    }
+
+    .top-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-navbar .search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .analytics {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .chart-container {
+        width: 100%;
+    }
+}
+
+/* Hover and Active States for Links and Buttons */
+.sidebar ul li a:hover,
+.sidebar ul li button:hover {
+    background-color: #444;
+    cursor: pointer;
+}
+
+.sidebar ul li button {
+    background-color: #5cb85c;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sidebar ul li button:hover {
+    background-color: #4cae4c;
+}
